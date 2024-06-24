@@ -2,7 +2,7 @@ import { FaTachometerAlt, FaCalendarAlt, FaBed, FaUsers, FaUserFriends} from 're
 
 const Sidebar = () => {
   const menuItems = [
-    { name: 'Dashboard', icon: <FaTachometerAlt />, link: '/' },
+    { name: 'Dashboard', icon: <FaTachometerAlt />, link: '/dashboard' },
     { name: 'Đặt lịch', icon: <FaCalendarAlt />, link: '/booking' },
     { name: 'Phòng', icon: <FaBed />, link: '/room' },
     { name: 'Khách hàng', icon: <FaUsers />, link: '/customer' },
