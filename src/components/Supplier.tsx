@@ -1,88 +1,138 @@
-import FooterDashboard from "./Footer";
-import HeaderDashboard from "./Header";
+import Footer from "./Footer";
+import Header from "./Header";
 import { FaSearch } from "react-icons/fa";
 import Sidebar from "./Sidebar";
 
 const Supplier = () => {
-  const suppliers = [
-    {
-      email: "supplier1@example.com",
-      phone: "123-456-7890",
-      address: "123 Supplier St, Supplier City",
-      roomsProvided: 20,
-      roomsBooked: 15,
-      roomsDeposited: 10,
-      totalRoomPrice: "$2000",
-      rating: 4.5,
-    },
-    {
-      email: "supplier2@example.com",
-      phone: "987-654-3210",
-      address: "456 Provider Ave, Provider Town",
-      roomsProvided: 15,
-      roomsBooked: 12,
-      roomsDeposited: 8,
-      totalRoomPrice: "$1500",
-      rating: 4.0,
-    },
-  ];
-
   return (
     <div className="flex flex-col min-h-screen">
-      <HeaderDashboard />
+      <Header />
       <div className="flex flex-1">
         <Sidebar />
-        <div className="ml-5">
-          <div className="mt-3">
-            <h2 className="text-3xl mb-4">Quản lý nhà cung cấp</h2>
-            <button className="text-white hover:bg-blue-700 mr-2 mb-2 p-2 px-5 bg-blue-600 border rounded-lg font-medium">Thêm</button>
-            <div className="relative">
-              <input
-                type="text"
-                className="border border-gray-300 px-3 py-2 mb-3 rounded-lg focus:outline-none focus:border-blue-500 w-full"
-                placeholder="Tìm kiếm..."
-              />
-              <div className="absolute right-3 top-3">
-                <FaSearch className="h-5 w-5 text-gray-400 cursor-pointer" />
+        <div className="flex min-h-screen w-full flex-col bg-muted/40">
+          <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <div className="pb-1">
+                  <h3 className="text-2xl font-semibold">Your Suppliers</h3>
+                  <p className="max-w-lg text-muted-foreground leading-relaxed text-sm mb-2">
+                    Manage your hotels here and view their sales performance.
+                  </p>
+                </div>
+                <div className="relative mb-2">
+                  <input
+                    type="text"
+                    className="border border-gray-300 px-8 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+                    placeholder="Search..."
+                  />
+                  <div className="absolute inset-y-0 flex items-center cursor-pointer pl-2">
+                    <FaSearch className="h-5 w-5 text-gray-400" />
+                  </div>
+                </div>
+                <div className="flex justify-end">
+                  <button className="px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium">
+                    Add Supplier
+                  </button>
+                </div>
               </div>
             </div>
-            <table className="min-w-full bg-white">
-              <thead>
-                <tr className="border border-gray-300">
-                  <th className="py-2 px-4 pr-8">Email</th>
-                  <th className="py-2 px-4 pr-8">Số Điện thoại</th>
-                  <th className="py-2 px-4 pr-8">Địa chỉ</th>
-                  <th className="py-2 px-4 pr-8">Số phòng cung cấp</th>
-                  <th className="py-2 px-4 pr-8">Đã đặt</th>
-                  <th className="py-2 px-4 pr-8">Đã cọc</th>
-                  <th className="py-2 px-4 pr-8">Giá phòng</th>
-                  <th className="py-2 px-4 pr-8">Đánh giá</th>
-                </tr>
-              </thead>
-              <tbody>
-                {suppliers.map((supplier, index) => (
-                  <tr key={index} className="border border-gray-300">
-                    <td className="py-2 px-4">{supplier.email}</td>
-                    <td className="py-2 px-4">{supplier.phone}</td>
-                    <td className="py-2 px-4">{supplier.address}</td>
-                    <td className="py-2 px-4">{supplier.roomsProvided}</td>
-                    <td className="py-2 px-4">{supplier.roomsBooked}</td>
-                    <td className="py-2 px-4">{supplier.roomsDeposited}</td>
-                    <td className="py-2 px-4">{supplier.totalRoomPrice}</td>
-                    <td className="py-2 px-4">{supplier.rating} *</td>
-                    <td className="py-2 px-4">
-                      <button className="text-white hover:bg-red-700 mr-2 p-2 bg-red-600 border rounded-lg font-medium">Xóa</button>
-                      <button className="text-white p-2 border rounded-lg bg-green-600 hover:bg-green-700 font-medium">Sửa</button>
-                    </td>
-                    
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+            <div>
+              <div className="bg-gray-200 p-8 rounded-lg shadow-lg">
+                <div className="pb-6">
+                  <h4 className="text-2xl font-semibold">Supplier List</h4>
+                  <div></div>
+                  <div>
+                    <table className="min-w-full divide-y divide-gray-200 mt-5">
+                      <thead className="">
+                        <tr className="text-left">
+                          <th className="px-6 py-3 text-sm font-medium uppercase tracking-wider">
+                            Email
+                          </th>
+                          <th className="px-6 py-3 text-sm font-medium uppercase tracking-wider">
+                            Phone
+                          </th>
+                          <th className="px-6 py-3 text-sm font-medium uppercase tracking-wider">
+                            Address
+                          </th>
+                          <th className="px-6 py-3 text-sm font-medium uppercase tracking-wider">
+                            Number of hotel rooms
+                          </th>
+                          <th className="px-6 py-3 text-sm font-medium uppercase tracking-wider">
+                            Placed
+                          </th>
+                          <th className="px-6 py-3 text-sm font-medium uppercase tracking-wider">
+                            Deposit
+                          </th>
+                          <th className="px-6 py-3 text-sm font-medium uppercase tracking-wider">
+                            Price
+                          </th>
+                          <th className="px-6 py-3 text-sm font-medium uppercase tracking-wider">
+                            Actions
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-200">
+                        <tr className="text-left">
+                          <td className="px-6 py-4">m@example.com</td>
+                          <td className="px-6 py-4">0123456789</td>
+                          <td className="px-6 py-4">Vietnam</td>
+                          <td className="px-6 py-4">50</td>
+                          <td className="px-6 py-4">16</td>
+                          <td className="px-6 py-4">20</td>
+                          <td className="px-6 py-4">$129.99</td>
+                          <td className="px-4 py-4">
+                            <button className="px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm font-medium ml-2">
+                              Edit
+                            </button>
+                            <button className="px-4 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium ml-2">
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                        <tr className="text-left">
+                          <td className="px-6 py-4">m@example.com</td>
+                          <td className="px-6 py-4">0123456789</td>
+                          <td className="px-6 py-4">Vietnam</td>
+                          <td className="px-6 py-4">50</td>
+                          <td className="px-6 py-4">16</td>
+                          <td className="px-6 py-4">20</td>
+                          <td className="px-6 py-4">$129.99</td>
+                          <td className="px-4 py-4">
+                            <button className="px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm font-medium ml-2">
+                              Edit
+                            </button>
+                            <button className="px-4 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium ml-2">
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                        <tr className="text-left">
+                          <td className="px-6 py-4">m@example.com</td>
+                          <td className="px-6 py-4">0123456789</td>
+                          <td className="px-6 py-4">Vietnam</td>
+                          <td className="px-6 py-4">50</td>
+                          <td className="px-6 py-4">16</td>
+                          <td className="px-6 py-4">20</td>
+                          <td className="px-6 py-4">$129.99</td>
+                          <td className="px-4 py-4">
+                            <button className="px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm font-medium ml-2">
+                              Edit
+                            </button>
+                            <button className="px-4 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium ml-2">
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
       </div>
-      <FooterDashboard />
+      <Footer />
     </div>
   );
 };

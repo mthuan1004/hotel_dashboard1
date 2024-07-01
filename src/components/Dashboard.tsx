@@ -9,6 +9,7 @@ import {
   Users,
 } from "lucide-react";
 const Dashboard: React.FC = () => {
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -69,14 +70,14 @@ const Dashboard: React.FC = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <div className="grid grid-cols-5 gap-2">
+                  <div className="grid grid-cols-5 gap-2 font-medium">
                     <div>Customer</div>
                     <div className="col-span-4 text-right">Amount</div>
                   </div>
-                  <div className="mt-2">
+                  <div className="mt-2 cursor-pointer">
                     <div className="divide-y divide-gray-200">
-                      <div className="py-4 flex items-center justify-between">
-                        <div className="flex flex-col">
+                      <div className="py-4 hover:bg-gray-100 flex items-center justify-between">
+                        <div className="flex flex-col ">
                           <div className="font-medium">Liam Johnson</div>
                           <div className="hidden text-sm text-gray-500 md:inline">
                             liam@example.com
@@ -84,7 +85,7 @@ const Dashboard: React.FC = () => {
                         </div>
                         <div className="text-right">$250.00</div>
                       </div>
-                      <div className="py-4 flex items-center justify-between">
+                      <div className="py-4 hover:bg-gray-100 flex items-center justify-between">
                         <div className="flex flex-col">
                           <div className="font-medium">Olivia Smith</div>
                           <div className="hidden text-sm text-gray-500 md:inline">
@@ -96,7 +97,7 @@ const Dashboard: React.FC = () => {
                         </div>
                         <div className="text-right">$150.00</div>
                       </div>
-                      <div className="py-4 flex items-center justify-between">
+                      <div className="py-4 hover:bg-gray-100 flex items-center justify-between">
                         <div className="flex flex-col">
                           <div className="font-medium">Noah Williams</div>
                           <div className="hidden text-sm text-gray-500 md:inline">
@@ -108,7 +109,7 @@ const Dashboard: React.FC = () => {
                         </div>
                         <div className="text-right">$350.00</div>
                       </div>
-                      <div className="py-4 flex items-center justify-between">
+                      <div className="py-4 hover:bg-gray-100 flex items-center justify-between">
                         <div className="flex flex-col">
                           <div className="font-medium">Emma Brown</div>
                           <div className="hidden text-sm text-gray-500 md:inline">
@@ -120,7 +121,7 @@ const Dashboard: React.FC = () => {
                         </div>
                         <div className="text-right">$450.00</div>
                       </div>
-                      <div className="py-4 flex items-center justify-between">
+                      <div className="py-4 hover:bg-gray-100 flex items-center justify-between">
                         <div className="flex flex-col">
                           <div className="font-medium">Liam Johnson</div>
                           <div className="hidden text-sm text-gray-500 md:inline">
@@ -140,7 +141,7 @@ const Dashboard: React.FC = () => {
                 <h3 className="text-2xl font-medium">Recent Sales</h3>
                 <div className="grid gap-4 mt-4">
                   <div className="grid gap-8">
-                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4">
+                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
                       <div className="hidden h-9 w-9 sm:flex">
                         <img
                           src={`https://avatar.iran.liara.run/public/${Math.floor(Math.random() * 100) + 1}`}
@@ -158,7 +159,7 @@ const Dashboard: React.FC = () => {
                       </div>
                       <div className="ml-auto font-medium">+$1,999.00</div>
                     </div>
-                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4">
+                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
                       <div className="hidden h-9 w-9 sm:flex">
                         <img
                           src={`https://avatar.iran.liara.run/public/${Math.floor(Math.random() * 100) + 1}`}
@@ -176,7 +177,7 @@ const Dashboard: React.FC = () => {
                       </div>
                       <div className="ml-auto font-medium">+$39.00</div>
                     </div>
-                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4">
+                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
                       <div className="hidden h-9 w-9 sm:flex">
                         <img
                           src={`https://avatar.iran.liara.run/public/${Math.floor(Math.random() * 100) + 1}`}
@@ -194,7 +195,7 @@ const Dashboard: React.FC = () => {
                       </div>
                       <div className="ml-auto font-medium">+$299.00</div>
                     </div>
-                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4">
+                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
                       <div className="hidden h-9 w-9 sm:flex">
                         <img
                           src={`https://avatar.iran.liara.run/public/${Math.floor(Math.random() * 100) + 1}`}
@@ -212,7 +213,7 @@ const Dashboard: React.FC = () => {
                       </div>
                       <div className="ml-auto font-medium">+$99.00</div>
                     </div>
-                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4">
+                    <div className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
                       <div className="hidden h-9 w-9 sm:flex">
                         <img
                           src={`https://avatar.iran.liara.run/public/${Math.floor(Math.random() * 100) + 1}`}
